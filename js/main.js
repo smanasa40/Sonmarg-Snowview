@@ -48,7 +48,6 @@
             $('#search-input').val('');
         });
     });
-
     /*------------------
 		Navigation
 	--------------------*/
@@ -76,15 +75,36 @@
     /*------------------------
 		Testimonial Slider
     ----------------------- */
-    $(".testimonial-slider").owlCarousel({
-        items: 1,
-        dots: false,
-        autoplay: true,
-        loop: true,
-        smartSpeed: 1200,
-        nav: true,
-        navText: ["<i class='arrow_left'></i>", "<i class='arrow_right'></i>"]
-    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const testimonials = window.testimonials;
+
+        let container = document.querySelector(".testimonial-slider.owl-carousel");
+        if(testimonials != null && testimonials.length > 0) {
+            testimonials.forEach(item => {
+                container.insertAdjacentHTML("beforeend", '<div class="ts-item"><p>'+item.message+'</p><div class="ti-author"><div class="rating">'+generateStars(item.rating)+'</div><h5>- '+item.author+', '+item.location+'</h5></div><img src="'+item.logo+'" alt=""></div>');
+            });
+        }
+
+        $(".testimonial-slider").owlCarousel({
+            items: 1,
+            dots: false,
+            autoplay: true,
+            loop: true,
+            smartSpeed: 1200,
+            nav: true,
+            navText: ["<i class='arrow_left'></i>", "<i class='arrow_right'></i>"]
+        });
+    })
+
+    function generateStars(rating) {
+    let full = Math.floor(rating);
+    let half = rating % 1 !== 0;
+    let html = "";
+
+    for (let i = 0; i < full; i++) html += `<i class="icon_star"></i>`;
+    if (half) html += `<i class="icon_star-half_alt"></i>`;
+    return html;
+    }
 
     /*------------------
         Magnific Popup
