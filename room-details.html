@@ -49,8 +49,8 @@
         </div>
         <nav class="mainmenu mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./rooms.html">Rooms</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li class="active"><a href="./rooms.html">Rooms</a></li>
                 <li><a href="./about-us.html">About Us</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
@@ -104,15 +104,15 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="./index.html">Home</a></li>
-                                    <li><a href="./rooms.html">Rooms</a></li>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li class="active"><a href="./rooms.html">Rooms</a></li>
                                     <li><a href="./about-us.html">About Us</a></li>
                                     <li><a href="./contact.html">Contact</a></li>
                                 </ul>
                             </nav>
-                            <div class="nav-right search-switch">
+                            <!-- <div class="nav-right search-switch">
                                 <i class="icon_search"></i>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -447,8 +447,8 @@
     tableRows[2].children[1].textContent = room.bed;
     tableRows[3].children[1].textContent = room.services;
 
-    document.querySelector(".f-para").textContent = room.description1;
-    document.querySelector(".f-para").insertAdjacentHTML("afterend", `<p>${room.description2}</p>`);
+    // document.querySelector(".f-para").textContent = room.description1;
+    // document.querySelector(".f-para").insertAdjacentHTML("afterend", `<p>${room.description2}</p>`);
   } else {
     alert("Room not found.");
   }
