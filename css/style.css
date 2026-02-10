@@ -112,7 +112,7 @@ ul, ol {
 	background-position: top center;
 }
 .spad {
-	padding-top: 100px;
+	padding-top: 40px;
 	padding-bottom: 100px;
 }
 .spad-2 {
@@ -1045,10 +1045,10 @@ ul, ol {
 
 .aboutus-page-section {
 	padding-top: 0;
-	padding-bottom: 70px;
+	padding-bottom: 30px;
 }
 .about-page-text {
-	margin-bottom: 65px;
+	margin-bottom: 30px;
 }
 .about-page-text .ap-title {
 	margin-bottom: 30px;
@@ -1118,7 +1118,7 @@ ul, ol {
 -----------------------*/
 
 .gallery-section {
-	padding-bottom: 80px;
+	padding-bottom: 30px;
 }
 .gallery-section .section-title {
 	margin-bottom: 38px;
@@ -1977,6 +1977,12 @@ ul, ol {
 
 
 /*-------------------------------- Respinsive Media Styles --------------------------------*/
+
+@media only screen and (min-width: 1200px){
+	.container {
+		max-width: 80% !important;
+	}
+}
 
 @media only screen and (min-width: 1554px) and (max-width: 1920px) {
 	.hp-room-items .hp-room-item .hr-text {
